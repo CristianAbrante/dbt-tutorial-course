@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: int_ecommerce__order_items_products
+    description: "Enriched version of the order items facts table"
+    columns:
+      - name: order_item_id
+        description: "The unique ID of the order item"
+        tests:
+          - not_null
+
+      - name: order_id
+        description: "The ID of the order this item belongs to"
+        tests:
+          - not_null
+
+      - name: user_id
+        description: "The ID of the user that placed the order"
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "The ID of the product that the item refers to"
+        tests:
+          - not_null
+
+      - name: item_sale_price
+        description: "The price the item is sold for"
+        tests:
+          - not_null
+
+      - name: product_department
+        description: "The department the product belongs to"
+        tests:
+          - not_null
+
+      - name: product_cost
+        description: "The cost of the product"
+        tests:
+          - not_null
+
+      - name: product_retail_price
+        description: "The retail price of the product"
+        tests:
+          - not_null 
+      
+      - name: item_profit
+        description: "The profit we make from selling the item"
+        tests:
+          - not_null
+
+      - name: item_discount
+        description: "The discounted price of the item"
+        tests:
+          - not_null
